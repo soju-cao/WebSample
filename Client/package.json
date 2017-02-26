@@ -1,0 +1,45 @@
+{
+  "name": "NG_UI_PROBE",
+  "version": "0.0.1",
+  "main": "src/js/index.js",
+  "dependencies": {
+    "browser-cookies": "^1.1.0",
+    "es6-promise": "^4.0.5",
+    "grommet": "^1.1.0",
+    "grommet-addons": "^0.3.0",
+    "gulp": "^3.9.0",
+    "jquery": "^3.1.1",
+    "lazy.js": "^0.5.0",
+    "lodash": "^4.12.0",
+    "react": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.4",
+    "redux": "^3.0.2",
+    "redux-logger": "^2.4.0",
+    "redux-persist": "^4.0.1",
+    "redux-thunk": "^1.0.3",
+    "route-parser": "0.0.5",
+    "superagent": "^3.3.1",
+    "superagent-promise-plugin": "^3.2.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "grommet-toolbox": "^1.1.0",
+    "gulp": "^3.9.1",
+    "redux-devtools": "^3.1.0",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.4",
+    "run-sequence": "^1.2.2",
+    "i18n-js": "^1.0.0",
+    "i18n-react": "^0.1.9"
+  },
+  "engines": {
+    "node": ">= 0.10",
+    "npm": ">= 1.4"
+  }
+}

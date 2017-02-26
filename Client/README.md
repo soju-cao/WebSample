@@ -1,6 +1,4 @@
-# ng-ui-probes
-websample dashboard
-
+websample dashboard client
 
 To run the app.    
   1. cd the project folder.     

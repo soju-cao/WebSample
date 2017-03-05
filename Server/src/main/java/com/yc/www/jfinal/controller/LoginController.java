@@ -14,7 +14,6 @@ public class LoginController extends Controller{
     public void login() {
        User user =  userService.findUser("nick", "nick");
         System.out.println(user);
-        //
         render("/html/hello.html");
     }
 }

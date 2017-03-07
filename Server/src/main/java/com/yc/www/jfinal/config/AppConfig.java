@@ -2,15 +2,15 @@ package com.yc.www.jfinal.config;
 
 import com.jfinal.config.*;
 import com.jfinal.ext.handler.ContextPathHandler;
+import com.jfinal.kit.PathKit;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
-import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
+import com.yc.www.jfinal.controller.IndexController;
 import com.yc.www.jfinal.controller.LoginController;
-import com.yc.www.jfinal.model.User;
-
-import java.util.Properties;
+import com.yc.www.jfinal.controller.UserController;
+import com.yc.www.jfinal.model.entity.User;
 
 /**
  * Created by Nick on 2017/3/5.
@@ -23,7 +23,10 @@ public class AppConfig extends JFinalConfig {
     }
 
     public void configRoute(Routes routes) {
-        routes.add("/", LoginController.class);
+        routes.setBaseViewPath("/pages");//base path view
+        routes.add("/", IndexController.class, "/");
+        routes.add("/login", LoginController.class, "/");
+        routes.add("/user", UserController.class, "/");
     }
 
     public void configEngine(Engine engine) {
@@ -37,10 +40,13 @@ public class AppConfig extends JFinalConfig {
         plugins.add(c3p0Plugin);
 
         ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
-        plugins.add(arp);
+        arp.setBaseSqlTemplatePath(PathKit.getRootClassPath());
+        arp.addSqlTemplate("user.sql");
 
+        plugins.add(arp);
+        arp.getSqlKit().getEngine();
         //add the entity mapping
-        arp.addMapping("user", User.class);
+        arp.addMapping("user", "id", User.class);
     }
 
     public void configInterceptor(Interceptors interceptors) {

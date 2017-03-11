@@ -23,7 +23,7 @@ public class UserService {
 
         user =User.dao.findFirst(sql);
 
-        System.out.printf("sql:"+sql);
+        System.out.printf("sql_template:"+sql);
 
         return user;
     }

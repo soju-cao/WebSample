@@ -14,11 +14,12 @@ public class IndexController extends Controller {
 
     @ActionKey("/index")
     public void index() {
-        render("index.html");
+        render("login.html");
     }
 
     @ActionKey("/test")
     public void test() {
+
         Test test = new Test();
         test.setAge("13");
         test.setName("nick");

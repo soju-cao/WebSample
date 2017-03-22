@@ -2,10 +2,10 @@ import DataProvider from '../utils/DataProvider';
 import * as CommomConstans from '../constants/CommomConstans';
 
 const API_PATHS = {
-  GET_DASHBOARD_SUMMARY: '/yc/login'
+  GET_DASHBOARD_SUMMARY: '/login'
 };
 
-const baseUrl = 'http://localhost:8080'
+const baseUrl = 'http://localhost:8080/jfinal'
 const dataProvider = new DataProvider(baseUrl);
 
 const getDashboardSummary = () =>

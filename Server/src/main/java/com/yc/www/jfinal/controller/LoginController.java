@@ -14,7 +14,7 @@ public class LoginController extends Controller{
 
     @ActionKey("/login")
     public void login() {
-       User user =  userService.findUser("nick", "nick");
+        User user =  userService.findUser("nick", "nick");
         System.out.println(user);
         renderJson(user);
     }

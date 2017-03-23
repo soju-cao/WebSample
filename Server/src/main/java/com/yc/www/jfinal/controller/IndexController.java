@@ -14,7 +14,7 @@ public class IndexController extends Controller {
 
     @ActionKey("/index")
     public void index() {
-        render("index.html");
+        render("login.html");
     }
 
     @ActionKey("/test")

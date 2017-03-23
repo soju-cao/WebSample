@@ -17,16 +17,9 @@ class Dashboard extends Component {
     console.log('render');
     console.log(this.props.dashboardSummary);
     return (
-      <html>
-      <head>
-        <meta http-equiv="Access-Control-Allow-Origin" content="localhost:8080"></meta>
-      </head>
-      <body>
       <div>
            hello wordfdfdfdf
       </div>
-      </body>      
-      </html>
     )
   }
 }

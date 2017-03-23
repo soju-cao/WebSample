@@ -1,5 +1,6 @@
 package com.yc.www.jfinal.controller;
 
+import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.yc.www.jfinal.model.bean.UserVO;
 import com.yc.www.jfinal.service.UserService;
@@ -13,6 +14,8 @@ public class UserController extends Controller {
     Logger log = LogManager.getLogger(UserController.class);
 
     private UserService userService = new UserService();
+
+    @ActionKey("/user/getuser")
     public void getUser() {
         String userName = getPara(0);
         String password = getPara(1);

@@ -4,11 +4,11 @@ import com.jfinal.aop.Before;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.yc.www.jfinal.model.entity.User;
+import com.yc.www.jfinal.service.UserService;
 
 /**
  * Created by Nick on 2017/3/5.
  */
-
 
 public class LoginController extends Controller{
     private UserService userService = new UserService();

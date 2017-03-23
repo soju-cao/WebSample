@@ -4,6 +4,6 @@
     #end
 
     #sql("addUser")
-        INSERT INTO user(name, password) VALUES (#p(name), #p(password))));
+        INSERT INTO user (name, password) VALUES (#p(name), #p(password))));
     #end
 #end

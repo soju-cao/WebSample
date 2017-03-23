@@ -18,7 +18,7 @@ class Dashboard extends Component {
     //console.log(this.props.dashboardSummary);
     return (
       <div>
-      hello world
+      {this.props.dashboardSummary}
       </div>
     )
   }

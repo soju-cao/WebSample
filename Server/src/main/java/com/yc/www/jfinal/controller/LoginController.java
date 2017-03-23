@@ -16,7 +16,6 @@ public class LoginController extends Controller{
     private UserService userService = new UserService();
 
     @ActionKey("/login")
-
     public void login() {
         String userName = getPara("userName");
         String pwd = getPara("pwd");
